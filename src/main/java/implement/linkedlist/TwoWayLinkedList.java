@@ -15,11 +15,11 @@ public class TwoWayLinkedList<T> {
   /**
    * 头节点.
    */
-  private Node<T> head;
+  private Node head;
   /**
    * 尾节点.
    */
-  private Node<T> tail;
+  private Node tail;
   /**
    * 链表长度.
    */
@@ -27,17 +27,17 @@ public class TwoWayLinkedList<T> {
 
 
   public TwoWayLinkedList() {
-    // 这里如果用了哨兵节点，在判断data为null的节点时，都需要额外处理
+
   }
 
-  public Node put(T data) {
+  public Node put(int data) {
     Node newNode = new Node(tail, data);
     tail = newNode;
     length ++;
     return newNode;
   }
 
-  public Node deleteFirst(T data) {
+  public Node deleteFirst(int data) {
     Node node = deleteFirst(head, data);
     if (node != null) {
       length--;
@@ -48,7 +48,7 @@ public class TwoWayLinkedList<T> {
     return node;
   }
 
-  public Node deleteFirst(Node node, T data) {
+  public Node deleteFirst(Node node, int data) {
     Node find = getFirstEqual(node, data);
     if (find == null) {
       return null;
@@ -57,17 +57,17 @@ public class TwoWayLinkedList<T> {
     return node;
   }
 
-  public int deleteAll(T data) {
+  public int deleteAll(int data) {
 
     return 0;
   }
 
 
-  private Node getFirstEqual(Node node, T data) {
+  private Node getFirstEqual(Node node, int data) {
     if (node == null) {
       return null;
     }
-    return node.dataEqual(data) ? node : getFirstEqual(node.getNext(), data);
+    return node.data == data ? node : getFirstEqual(node.getNext(), data);
   }
 
 
@@ -79,7 +79,7 @@ public class TwoWayLinkedList<T> {
   @ToString
   @NoArgsConstructor
   @AllArgsConstructor
-  class Node<T> {
+  class Node {
 
     /**
      * 前驱指针.
@@ -88,19 +88,15 @@ public class TwoWayLinkedList<T> {
     /**
      * 数据.
      */
-    private T data;
+    private int data;
     /**
      * 后继指针.
      */
     private Node next;
 
-    public Node(Node prev, T data) {
+    public Node(Node prev, int data) {
       this.prev = prev;
       this.data = data;
-    }
-
-    public boolean dataEqual(T data) {
-      return this.data == null ? (data == null) : this.data.equals(data);
     }
 
     public void deleteSelf() {

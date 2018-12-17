@@ -10,9 +10,6 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 单向链表单元测试.
- *
- * @author zhaona
- * @create 2018/11/29 4:53 PM
  */
 public class SinglyLinkedListTest {
 

@@ -4,10 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-/**
- * @author zhaona
- * @create 2018/8/6 上午10:37
- */
+
 public class BinarySearchTest {
 
   @Test
