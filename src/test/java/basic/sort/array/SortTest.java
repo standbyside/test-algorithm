@@ -34,4 +34,20 @@ public class SortTest {
     int[] actual = SelectionSort.sort(array);
     assertEquals(Arrays.toString(expected), Arrays.toString(actual));
   }
+
+  @Test
+  public void testMergeSort() {
+    int[] array = new int[] {3, 5, 4, 1, 2, 6};
+    int[] expected = new int[] {1, 2, 3, 4, 5, 6};
+    int[] actual = MergeSort.sort(array);
+    assertEquals(Arrays.toString(expected), Arrays.toString(actual));
+  }
+
+  @Test
+  public void testQuickSort() {
+    int[] array = new int[] {3, 5, 4, 1, 2, 6};
+    int[] expected = new int[] {1, 2, 3, 4, 5, 6};
+    int[] actual = QuickSort.sort(array);
+    assertEquals(Arrays.toString(expected), Arrays.toString(actual));
+  }
 }
