@@ -1,15 +1,21 @@
-package basic.sort.array;
+package basic.sort;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
+
+import basic.sort.array.BubbleSort;
+import basic.sort.array.InsertionSort;
+import basic.sort.array.MergeSort;
+import basic.sort.array.QuickSort;
+import basic.sort.array.SelectionSort;
 import org.junit.jupiter.api.Test;
 
 
 /**
  * 数组排序单元测试.
  */
-public class SortTest {
+public class ArraySortTest {
 
   @Test
   public void testBubbleSort() {
